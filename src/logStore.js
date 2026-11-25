@@ -32,8 +32,8 @@ export class LogStore {
       this.version++
       for (const fn of this.listeners) fn()
     }
-    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(run)
-    else setTimeout(run, 16)
+    // setTimeout, not requestAnimationFrame: rAF stops in background tabs and the log must keep up.
+    setTimeout(run, 33)
   }
 
   add(text, kind = 'rx') {
