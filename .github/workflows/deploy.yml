@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Sent by ambiback-firmware's release workflow when a new firmware is published
+  repository_dispatch:
+    types: [firmware-release]
+  # Fallback in case the dispatch is not set up
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      firmware_run_id:
+        description: 'Optional: also publish the "ambiback-firmware" artifact of this ambiback-firmware workflow run (as dev build)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Copy firmware releases into the site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-firmware.mjs --count 5
+      - name: Add firmware from a workflow run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.firmware_run_id != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.FIRMWARE_ARTIFACT_TOKEN || secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ inputs.firmware_run_id }}
+        run: node scripts/fetch-firmware.mjs --run "$RUN_ID"
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
