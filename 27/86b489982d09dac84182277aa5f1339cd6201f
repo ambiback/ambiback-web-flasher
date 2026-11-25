@@ -1,0 +1,90 @@
+src/firmware/catalog.js
+  s_d8c324551c803d::t_1f9a99843f324e 1-69
+src/components/WifiSetup.jsx
+  s_d8c324551c803d::t_aa4294fb4476aa 1-155
+src/serial/lineSplitter.js
+  s_d8c324551c803d::t_907abb2c5c9d39 1-32
+public/icon.svg
+  s_d8c324551c803d::t_ecc69a3e8ede8a 1
+src/serial/improv.js
+  s_d8c324551c803d::t_ace70fe9d548c5 1-98
+AGENTS.md
+  s_d8c324551c803d::t_956c6ee16245e6 1-22
+index.html
+  s_d8c324551c803d::t_ecc69a3e8ede8a 1-15
+vite.config.js
+  s_d8c324551c803d::t_ecc69a3e8ede8a 1-14
+src/pages/MonitorPage.jsx
+  s_d8c324551c803d::t_348c19298bcadd 1-207
+src/SerialContext.jsx
+  s_d8c324551c803d::t_20e5e07346c932 2,7,14-15,22,48-59,63,65,70,90,101,103
+  s_d8c324551c803d::t_07cbdbb5c709d7 76-84
+  s_d8c324551c803d::t_4535abdfd2861e 1,3-6,8-12,16-21,23-47,60-62,64,66-69,71-75,85-89,91-100,102,104-108
+  s_d8c324551c803d::t_311b7a229800d0 13
+src/serial/ambiCommands.js
+  s_d8c324551c803d::t_8762de04d16f25 1-69
+src/index.css
+  s_d8c324551c803d::t_21644b825f013e 1-377
+.gitignore
+  s_d8c324551c803d::t_a2db3ca5c5c90e 1-5
+src/main.jsx
+  s_d8c324551c803d::t_47a0879f8b2c3c 1-16
+README.de.md
+  s_d8c324551c803d::t_2ca9df1ca57ee6 1-74
+eslint.config.js
+  s_d8c324551c803d::t_ecc69a3e8ede8a 1-25
+src/i18n.jsx
+  s_d8c324551c803d::t_99669f943b7a1e 1-167
+src/pages/DevicePage.jsx
+  s_d8c324551c803d::t_0e3f6e07e7b6e0 1-99
+scripts/fetch-firmware.mjs
+  s_d8c324551c803d::t_6a4f003b2d1e11 1-182
+src/debug/backtrace.js
+  s_d8c324551c803d::t_6cb6067d4057fa 1-50
+src/serial/improvClient.js
+  s_d8c324551c803d::t_dddb8f5875091f 1-118
+src/serial/flasher.js
+  s_d8c324551c803d::t_0d343d61a22225 46-48
+  s_d8c324551c803d::t_e4cc40ebe9d44c 1-45,49-80
+.github/workflows/deploy.yml
+  s_d8c324551c803d::t_6b049307277231 1-60
+package.json
+  s_d8c324551c803d::t_32164d7d9a8cb5 11
+  s_d8c324551c803d::t_62eab3d8e5e794 1-10,12-29
+src/logStore.js
+  s_d8c324551c803d::t_218fb743cf3508 1-54
+src/pages/InstallPage.jsx
+  s_d8c324551c803d::t_5dc608aef9a89d 1-196
+.github/workflows/ci.yml
+  s_d8c324551c803d::t_6b049307277231 1-23
+src/App.jsx
+  s_d8c324551c803d::t_6fefabd92ea37c 1-144
+THIRD_PARTY_NOTICES.md
+  s_d8c324551c803d::t_5ab9dddfddfa4c 1-18
+README.md
+  s_d8c324551c803d::t_c1e662e1dbe3eb 1-103
+src/serial/port.js
+  s_d8c324551c803d::t_0662dc742966e0 1-149
+test/protocol.test.js
+  s_d8c324551c803d::t_d2320c5352894e 1-113
+.gitattributes
+  s_d8c324551c803d::t_5f157e570b34eb 1-2
+package-lock.json
+  s_d8c324551c803d::t_b1fdb74908633b 1-2760
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2786b489982d09dac84182277aa5f1339cd6201f",
+  "prompts": {},
+  "sessions": {
+    "s_d8c324551c803d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba3b8c4a-8957-4041-b044-40dfa20e570a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Andre Lorbach <1675286+alorbach@users.noreply.github.com>"
+    }
+  }
+}
