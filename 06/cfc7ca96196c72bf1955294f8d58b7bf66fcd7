@@ -1,0 +1,19 @@
+src/logStore.js
+  s_d8c324551c803d::t_56090b98645142 35-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "06cfc7ca96196c72bf1955294f8d58b7bf66fcd7",
+  "prompts": {},
+  "sessions": {
+    "s_d8c324551c803d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba3b8c4a-8957-4041-b044-40dfa20e570a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Andre Lorbach <1675286+alorbach@users.noreply.github.com>"
+    }
+  }
+}
